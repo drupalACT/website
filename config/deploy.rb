@@ -1,7 +1,7 @@
 set :app_name, "drupalact"
-set :location, "drupalact"
-set :application, "drupalact"
-set :repository,  "ssh://git@bitbucket.org:drupalact/website.git"
+set :location, "50.116.8.20"
+set :application, "drupalact.org.au"
+set :repository,  "git@bitbucket.org:drupalact/website.git"
 
 set :server_remote_name, "origin"
 
