@@ -1,5 +1,5 @@
 set :app_name, "drupalact"
-set :location, "50.116.8.20"
+set :location, "drupalact.org.au"
 set :application, "drupalact.org.au"
 set :repository,  "git@bitbucket.org:drupalact/website.git"
 
