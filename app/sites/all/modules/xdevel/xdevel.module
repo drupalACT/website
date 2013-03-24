@@ -1,0 +1,107 @@
+<?php
+/**
+ * @file
+ * Xtfers devel
+ *
+ * @copyright Copyright(c) 2012 Chris Skene
+ * @license GPL v2 http://www.fsf.org/licensing/licenses/gpl.html
+ * @author Chris Skene chris at xtfer dot com
+ */
+
+/**
+ * Implements hook_init().
+ */
+function xdump_init() {
+  if (user_access('access devel information')) {
+    has_krumo();
+  }
+}
+
+/**
+ * Load Krumo from the Devel module.
+ */
+function xdevel_krumo() {
+  static $loaded;
+
+  if ($loaded != TRUE) {
+    @include_once DRUPAL_ROOT . '/' . drupal_get_path('module', 'devel') . '/krumo/class.krumo.php';
+    if (function_exists('krumo') && !drupal_is_cli()) {
+      drupal_add_js(drupal_get_path('module', 'devel') . '/devel_krumo_path.js');
+      $loaded = TRUE;
+
+      return TRUE;
+    }
+    return FALSE;
+  }
+
+  return TRUE;
+}
+
+/**
+ * Dump via krumong.
+ *
+ * @param mixed $args
+ *   Any args.
+ */
+function xkng($args) {
+  if (function_exists('krumong')) {
+    krumong()->kMessage($args);
+  }
+  else {
+    drupal_set_message('KrumoNG not found');
+  }
+}
+
+/**
+ * Our version of dpm().
+ */
+function xdump($input, $name = NULL, $type = 'status') {
+  if (user_access('access devel information')) {
+    $export = xkprint_r($input, TRUE, $name);
+    drupal_set_message($export, $type);
+  }
+  return $input;
+}
+
+/**
+ * Our version of kprint_r().
+ */
+function xkprint_r($input, $return = FALSE, $name = NULL) {
+  if (xdevel_krumo()) {
+    return $return ? (isset($name) ? $name . ' => ' : '') . krumo_ob($input) : krumo($input);
+  }
+
+  drupal_set_message('Krumo was not loaded correctly');
+
+  return FALSE;
+}
+
+/**
+ * Return PHP debugging information for realpath cache size.
+ *
+ * @param string $report
+ *   The data requested.
+ *
+ * @return null|string
+ *   The result.
+ */
+function xdevel_realpath_data($report) {
+
+  $realpath_cache_used = number_format((realpath_cache_size()/1000), 2);
+
+  switch ($report) {
+    case 'realpath_cache_used':
+
+      return $realpath_cache_used . 'K';
+      break;
+
+    case 'realpath_cache_remaining':
+      $realpath_cache_available = (int)str_ireplace('k', '', ini_get( 'realpath_cache_size'));
+
+      return ( $realpath_cache_available - $realpath_cache_used ) . 'K';
+      break;
+    default:
+      return t('No data');
+      break;
+  }
+}

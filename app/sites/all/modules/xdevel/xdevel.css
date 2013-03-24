@@ -1,0 +1,15 @@
+/* Because Sevens native console screen is just stupid */
+
+body.in-maintenance #page {
+  overflow: auto;
+  width: 960px;
+  margin: 0 auto;
+  padding: 2em 50px;
+}
+
+body.in-maintenance #content {
+  float: none;
+  width: 100%;
+  padding-right: 20px;
+  clear: none;
+}
