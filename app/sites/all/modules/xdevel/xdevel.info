@@ -1,0 +1,7 @@
+name = X Devel
+description = "Xtfer's devel"
+core = 7.x
+
+stylesheets[][screen] = xdevel.css
+
+package = Xtfer
