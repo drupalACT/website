@@ -72,7 +72,7 @@
           <?php if ($logo): ?>
             <div id="site-logo">
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-              <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>"/>
+              <img src="/sites/all/themes/responsive_blog/logo.jpg" alt="<?php print t('Home'); ?>"/>
             </a></div><?php endif; ?>
         <?php endif; ?>
         <h1 id="site-name">
