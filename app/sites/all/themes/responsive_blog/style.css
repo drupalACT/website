@@ -211,7 +211,7 @@ hr {
 
 /* Text elements */
 p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 ul, ol {
   margin: 0 0 1em 1.5em;
@@ -235,13 +235,13 @@ ul ul, ol ol, ul ol, ol ul {
   margin-bottom: 0;
 }
 dl {
-  margin: 0 2em;
+  margin: 0 1em;
 }
 dt {
   font-weight: bold;
 }
 dd {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 strong {
   font-weight: bold;
