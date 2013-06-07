@@ -37,9 +37,9 @@ features[views][] = "sponsorships"
 features[views_api][] = "api:2"
 name = "COD Sponsorship Sales"
 package = "COD"
-; Information added by drupal.org packaging script on 2013-01-27
-version = "7.x-1.0-alpha2+2-dev"
+; Information added by drupal.org packaging script on 2013-06-06
+version = "7.x-1.0-alpha2+14-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1359247818"
+datestamp = "1370479393"
 
