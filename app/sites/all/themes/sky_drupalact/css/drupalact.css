@@ -1,0 +1,550 @@
+
+/* FONTS */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300italic,600,300,400italic,600italic);
+
+
+/* OVERRIDES */
+/* Making these more specific so they override Sky CSS */
+
+html body, 
+html #site-name,
+html h1, 
+html h2, 
+html h3, 
+html h4 {
+  color: #000;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: normal;
+}
+
+
+html #menu-bar .menu-wrapper, 
+html #primary-menu-bar .menu-wrapper {
+  font-weight: 600;
+}
+
+.snw-n #site-name,
+.ssw-b #site-slogan, 
+.ptw-b #page-title, 
+.ntw-b .node-title, 
+.ctw-b .comment-title, 
+.btw-b .block-title,
+html h2,
+.snw-b #site-name,
+.ptw-b #page-title,
+html h1  {
+  font-weight: 300;
+}
+
+body.bb-n {
+  background: #fff url(images/banner.jpg) center top no-repeat;
+}
+
+/*
+ * Typography
+ */
+ 
+a:hover, 
+a:focus, 
+a:active {
+  text-decoration: underline;
+}
+
+html h1 {
+  font-size: 3em;
+  margin-bottom: 0.75em;
+  line-height: 1.2
+}
+
+html h2,
+.block-title {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+html h2 {
+  margin-top: 1.5em;
+} 
+
+/* LAYOUT */
+
+.region-top-menu,
+#branding,
+#menu-bar .block,
+#page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.one-sidebar #page {
+  max-width: 840px;
+}
+
+#page > #header {
+  padding: 0;
+}
+
+#branding {
+  margin: 0 auto 90px;
+  float: none;
+}
+
+#logo {
+  float: left;
+  padding: 0;
+  width:25%;
+  margin-top: -50px;
+  margin-left: 20px;
+}
+
+h1#site-name {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 10px;
+  padding-left: 9px;
+}
+
+#name-and-slogan {
+  margin: 70px 0 0 20px;
+  margin-left: 25%;
+}
+
+h2#site-slogan {
+  padding-left: 9px;
+}
+
+.region-tertiary-content {
+  clear:  both;
+  padding-top: 3em;
+}
+
+.region-top-menu {
+  margin-bottom: 0;
+}
+
+.region-top-menu .block.last .block-inner {
+  margin-right: 0;
+}
+
+/*
+ * Sidebars
+ */
+
+/* One sidebar - sidebar-first */
+.one-sidebar .container  .content-inner {
+  margin-left: 31%;
+}
+
+.region-sidebar-first .block {
+  margin-bottom: 3em;
+}
+
+.region-sidebar-first .block-inner {
+  margin-right: 10px;
+}
+
+.region-sidebar-first ul:last-child {
+  margin-bottom: 0;
+}
+
+.region-sidebar-first {
+  font-size: 0.813em; /* 13px */
+}
+
+.one-sidebar .region-sidebar-first {
+  width: 31%;
+}
+
+.region-sidebar-first .block-title {
+  font-size: 1.231em; /* 16 */
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+
+.region-sidebar-first .block.first {
+  margin-top: 12px;
+}
+
+.region-sidebar-first .block-inner {
+  background: url("images/menu_bg.png") no-repeat scroll center bottom transparent;
+  padding: 0 0 3em;
+}
+
+.region-sidebar-first .menu {
+  list-style: none;
+  margin-left: 0;
+}
+
+.region-sidebar-first .menu .menu a {
+  padding-left: 1.5em;
+}
+
+.region-sidebar-first .menu li {
+  list-style: none;
+  border-bottom: 1px solid #CCCAC5;
+}
+
+.region-sidebar-first .menu .menu {
+  border-top: 1px solid #CCCAC5;
+}
+
+.region-sidebar-first .menu .expanded .last {
+  border-bottom: none;
+}
+
+.region-sidebar-first .menu a {
+  font-weight: bold;
+  padding: .25em 0.5em;
+  display: block;
+}
+
+.region-sidebar-first .menu a:hover,
+.region-sidebar-first .menu a:active,
+.region-sidebar-first .menu a:focus {
+  background-color: #E6E4DE;
+  text-decoration: none;
+  color:#2F79B2;
+}
+
+.region-sidebar-first .menu .expanded {
+  border-bottom: 2px solid #94D5FF;
+    border-top: 2px solid #94D5FF;
+
+}
+
+.region-sidebar-first .menu .menu a {
+  font-weight: normal
+}
+
+/* COMPONENTS */
+
+.twitter-timeline  {
+  width: 100% !important;
+}
+
+/* BlOCKS */
+
+
+
+/* 
+ * MENU 
+ */
+
+#menu-bar {
+  background: url(images/menu_bg.png) bottom no-repeat;
+  padding-bottom:20px;
+}
+
+#menu-bar .block {
+  background-color:#fff;
+  -webkit-border-radius: 6px 6px 0px 0px;
+border-radius: 6px 6px 0px 0px;
+}
+
+#menu-bar .menu-wrapper .menu li a {
+  background: url(images/menu.png) top center no-repeat;
+  color: #2f79b2;
+  padding: 75px 1em 0;
+}
+
+#menu-bar .menu-wrapper .menu li a:hover {
+  text-decoration:underline;
+}
+
+article > header {
+border:none;
+}
+
+#menu-bar .menu li {
+  width: 33%;
+  text-align: center;
+}
+
+#menu-bar .menu-wrapper li a {
+  line-height: 1.2;
+  white-space: normal;
+}
+
+/*
+ * Menu icons
+ */
+
+#menu-bar .menu-wrapper .menu .menu-item-789 a { /* About Drupal ACT */
+  background-position: center 0;
+}
+
+#menu-bar .menu-wrapper .menu .menu-item-896 a { /* Events */
+  background-position: center -300px;
+}
+
+#menu-bar .menu-wrapper .menu .menu-item-1581 a { /*Drupal gov */
+  background-position: center -150px;
+}
+
+.title-icon {
+  padding:20px 0 30px 90px;
+  background: url('images/findus.jpg') no-repeat;
+  margin-top:0;
+  margin-lefT: -25px;
+  margin-top: 3em;
+}
+
+.front article, .front #block-system-main {
+  margin-bottom:0;
+}
+
+#block-search-form {
+  float:right;
+  margin-top:20px;
+}
+
+#block-search-form .form-item-search-block-form input {
+  background-color:#94d5ff;
+  border:none !important;
+  padding:5px 10px 5px 10px;
+  width:250px;
+  outline:0;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: textfield;
+  margin:0;
+  margin-right:-30px;
+  color:#fff;
+  background-image:none;
+}
+
+#search-block-form input.form-submit:hover {
+  background-color:#8bc8f0;
+}
+#search-block-form input.form-submit {
+  background-color:#94d5ff;
+  border:none !important;
+  width: 25px;
+  height: 25px;
+  outline:0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: button;
+  display:block;
+  float:right;
+  padding:3px;
+  background:url('images/search-button.png') no-repeat;
+  margin:2px 2px 0 0;
+}
+.find-us a, #page footer #block-block-2 a:hover {
+  color:#000;
+  text-decoration:none;
+}
+
+.find-us a:hover, #page footer #block-block-2 a {
+  text-decoration:underline;
+}
+h2#site-slogan {
+  color:#bde5ff;
+  font-style:italic;
+}
+
+.view-events .field-label, 
+.node-type-basic-event .block-system .field-label {
+  display: block;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+
+.view-events .field-name-field-event-type ul, .node-type-basic-event .block-system ul {
+  margin:0;
+  list-style:none;
+}
+
+
+.region-footer {
+  font-size:83%;
+}
+
+  
+/*
+ * Views
+ */
+
+.view-footer p:last-child {
+  margin-bottom: 0;
+} 
+ 
+/* Events */
+
+.view-events  {
+  margin-bottom: 35px;
+}
+
+.view-events .views-row {
+  background: url("images/menu_bg.png") no-repeat center bottom;
+  padding-bottom: 35px;
+} 
+
+.view-events .view-footer {
+  margin-top: 5px;
+  text-align: right;
+  font-size: 0.813em;
+}
+
+/*
+ * Sponsors
+ */
+ 
+.views-field-field-sponsor-logo {
+  margin: 2em 0;
+}
+
+/*
+ * Nodes
+ */
+ 
+.node-basic-event.view-mode-full .field-name-field-groups-drupal-org-link {
+  background: url("images/menu_bg.png") no-repeat center top;
+  padding-top: 35px;
+}
+.node-basic-event.view-mode-full .field-name-body {
+  margin-bottom: 0.7em;
+  background: url("images/menu_bg.png") no-repeat center bottom;
+  padding-bottom: 35px;
+}
+
+.node-content img {
+  margin: 0.5em 1em 0.5em 0;
+}
+
+/* Banners */
+
+.node-banner {
+  margin: 2.5em 0 1em;
+} 
+
+.node-banner img {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+.node-banner .field {
+  padding: 0;
+}
+
+.node-banner .node-content {
+  padding: 0;
+}
+
+.node-banner .field-items .field-item {
+  padding: 0;
+  margin: 0;
+}
+
+/* RESPONSIVE OVERRIDES */
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  html #menu-bar .menu-wrapper li a, 
+  html #menu-bar .menu-wrapper .menu li a {
+    padding: 75px 20px 20px 20px;
+  }
+  #branding {
+    margin-left:0;
+  }
+  
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  html #menu-bar .menu-wrapper li a, 
+  html #menu-bar .menu-wrapper .menu li a {
+    padding: 75px 10px 10px 10px;
+  }
+  #branding {
+    margin-left:0;
+  }
+  .find-us a {
+    font-size:0.8em;
+  }
+  #main-content {
+    font-size:83%;
+  }
+  .one-sidebar .container .content-inner {
+  margin-left: 0;
+}
+
+}
+
+@media screen and (max-width: 480px) and (min-width: 321px) {
+  html h2 {
+    font-size: 1.4em;
+  }
+  html h3 {
+    font-size: 1.2em;
+  }
+  html h4 {
+    font-size: 1em;
+  }
+  #branding {
+    margin-left:0;
+  }
+  
+  .one-sidebar .container .content-inner {
+  margin-left: 0;
+}
+
+  #menu-bar .menu-wrapper .menu li a {
+    background:none;
+    margin-left:13px;
+  }
+  .find-us a {
+    font-size:0.7em;
+  }
+  #menu-bar {
+    background: none;
+    padding-bottom:0;
+  }
+  #main-content {
+    font-size:83%;
+  }
+}
+
+@media screen and (max-width: 320px) and (min-width: 0px) {
+  .find-us a {
+    text-indent:-999em;
+    font-size:0.1px;
+  }
+  .one-sidebar .container .content-inner {
+  margin-left: 0;
+}
+
+  #branding {
+    margin-left:0;
+  }
+  #block-system-main-menu {
+    background-color:#fff;
+  }
+  #menu-bar .menu-wrapper .menu li a {
+    background:none;
+    margin-left:13px;
+  }
+  .html #page #columns {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  #menu-bar {
+    background: none;
+    padding-bottom:0;
+  }
+  #main-content {
+    font-size:83%;
+  }
+}
