@@ -1,0 +1,306 @@
+
+/* OVERRIDES */
+/* Making these more specific so they override Sky CSS */
+
+html body, 
+html #site-name,
+html #page-title,
+html h1, 
+html h2, 
+html h3, 
+html h4 {
+  color: #000;
+  font-family: 'OpenSansRegular', arial, sans-serif;
+  font-weight: normal;
+}
+
+html #menu-bar .menu-wrapper, 
+html #primary-menu-bar .menu-wrapper {
+  font-family: 'OpenSansSemibold', arial, sans-serif;
+}
+
+.snw-b #site-name, .ssw-b #site-slogan, .ptw-b #page-title, .ntw-b .node-title, .ctw-b .comment-title, .btw-b .block-title {
+  font-weight: normal;
+}
+
+body.bb-n {
+  background: #fff url(images/banner.jpg) center top no-repeat;
+}
+
+/* LAYOUT */
+
+#page {
+  max-width: 640px;
+}
+
+#page > #header {
+  padding: 0;
+}
+
+#branding {
+  margin: 10px 0 90px -180px;
+}
+
+#logo {
+  float: left;
+  padding: 0;
+  width:20%;
+  padding-right:3%;
+  min-width:100px;
+}
+
+h1#site-name {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom:20px;
+}
+
+#name-and-slogan {
+  margin:30px 0 0 20px;
+  margin-left:30%;
+}
+
+/* MENU */
+
+#menu-bar {
+  background: url(images/menu_bg.png) bottom no-repeat;
+  padding-bottom:20px;
+}
+
+#menu-bar .menu {
+  background-color:#fff;
+}
+
+#menu-bar .menu-wrapper .menu li a {
+  background: url(images/menu.png) top center no-repeat;
+  color: #2f79b2;
+  padding: 60px 2em 0 2em
+}
+#menu-bar .menu-wrapper .menu li a:hover {
+  text-decoration:underline;
+}
+
+article > header {
+border:none;
+}
+
+#menu-bar .menu-wrapper .menu .menu-item-789 a {
+  background-position: center 0;
+}
+
+#menu-bar .menu-wrapper .menu .menu-item-896 a {
+  background-position: center -300px;
+}
+
+#menu-bar .menu-wrapper .menu .menu-item-898 a {
+  background-position: center -150px;
+}
+
+#block-block-1 h2 {
+  padding:20px 0 30px 90px;
+  background: url('images/findus.jpg') no-repeat;
+  margin-top:0;
+  margin-lefT: -25px;
+}
+
+.front article, .front #block-system-main {
+  margin-bottom:0;
+}
+
+#block-search-form {
+  float:right;
+  margin-top:20px;
+}
+
+#block-search-form .form-item-search-block-form input {
+  background-color:#94d5ff;
+  border:none !important;
+  padding:5px 10px 5px 10px;
+  width:250px;
+  outline:0;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: textfield;
+  margin:0;
+  margin-right:-30px;
+  color:#fff;
+  background-image:none;
+}
+
+#search-block-form input.form-submit:hover {
+  background-color:#8bc8f0;
+}
+#search-block-form input.form-submit {
+  background-color:#94d5ff;
+  border:none !important;
+  width: 25px;
+  height: 25px;
+  outline:0;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: button;
+  display:block;
+  float:right;
+  padding:3px;
+  background:url('images/search-button.png') no-repeat;
+  margin:2px 2px 0 0;
+}
+.find-us a, #page footer #block-block-2 a:hover {
+  color:#000;
+  text-decoration:none;
+}
+
+.find-us a:hover, #page footer #block-block-2 a {
+  text-decoration:underline;
+}
+h2#site-slogan {
+  color:#bde5ff;
+  font-style:italic;
+}
+
+.view-events .field-label, .node-type-basic-event .block-system .field-label {
+  display:block;
+  font-weight:bold;
+  width:30%;
+  margin-right:5%;
+}
+
+.view-events .field-name-field-event-type ul, .node-type-basic-event .block-system ul {
+  margin:0;
+  list-style:none;
+}
+
+
+.region-footer {
+    font-size:83%;
+  }
+
+/* RESPONSIVE OVERRIDES */
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  html #menu-bar .menu-wrapper li a, 
+  html #menu-bar .menu-wrapper .menu li a {
+    padding: 65px 20px 20px 20px;
+  }
+  #branding {
+    margin-left:0;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 481px) {
+  html #menu-bar .menu-wrapper li a, 
+  html #menu-bar .menu-wrapper .menu li a {
+    padding: 65px 10px 10px 10px;
+  }
+  #branding {
+    margin-left:0;
+  }
+  .find-us a {
+    font-size:0.8em;
+  }
+  #main-content {
+    font-size:83%;
+  }
+}
+
+@media screen and (max-width: 480px) and (min-width: 321px) {
+  html h2 {
+    font-size: 1.4em;
+  }
+  html h3 {
+    font-size: 1.2em;
+  }
+  html h4 {
+    font-size: 1em;
+  }
+  #branding {
+    margin-left:0;
+  }
+  #menu-bar .menu-wrapper .menu li a {
+    background:none;
+    margin-left:13px;
+  }
+  .find-us a {
+    font-size:0.7em;
+  }
+  #menu-bar {
+    background: none;
+    padding-bottom:0;
+  }
+  #main-content {
+    font-size:83%;
+  }
+}
+
+@media screen and (max-width: 320px) and (min-width: 0px) {
+  .find-us a {
+    text-indent:-999em;
+    font-size:0.1px;
+  }
+  #branding {
+    margin-left:0;
+  }
+  #block-system-main-menu {
+    background-color:#fff;
+  }
+  #menu-bar .menu-wrapper .menu li a {
+    background:none;
+    margin-left:13px;
+  }
+  .html #page #columns {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+  #menu-bar {
+    background: none;
+    padding-bottom:0;
+  }
+  #main-content {
+    font-size:83%;
+  }
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('fonts/OpenSans-Light-webfont.eot');
+  src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+       url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+       url('fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('fonts/OpenSans-Regular-webfont.eot');
+  src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+       url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url('fonts/OpenSans-Semibold-webfont.eot');
+  src: url('fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+       url('fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+       url('fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
