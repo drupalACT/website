@@ -66,15 +66,12 @@
 ?>
 <div id="wrapper">
   <header id="header" class="clearfix">
-
+    <?php if (theme_get_setting('image_logo','responsive_blog')): ?>
+      <?php if ($logo): ?><div id="site-logo"><a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+        <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
+      </a></div><?php endif; ?>
+    <?php else: ?>
       <hgroup id="site-name-wrap">
-        <?php if (theme_get_setting('image_logo', 'responsive_blog')): ?>
-          <?php if ($logo): ?>
-            <div id="site-logo">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-              <img src="/sites/all/themes/responsive_blog/logo.jpg" alt="<?php print t('Home'); ?>"/>
-            </a></div><?php endif; ?>
-        <?php endif; ?>
         <h1 id="site-name">
           <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
             <span><?php print $site_name; ?></span>
@@ -82,37 +79,37 @@
         </h1>
         <?php if ($site_slogan): ?><h2 id="site-slogan"><?php print $site_slogan; ?></h2><?php endif; ?>
       </hgroup>
-
+    <?php endif; ?>
     <?php if (theme_get_setting('socialicon_display', 'responsive_blog')): ?>
-        <?php
-        $twitter_url = check_plain(theme_get_setting('twitter_url', 'responsive_blog'));
-        $facebook_url = check_plain(theme_get_setting('facebook_url', 'responsive_blog'));
-        $google_plus_url = check_plain(theme_get_setting('google_plus_url', 'responsive_blog'));
+        <?php 
+        $twitter_url = check_plain(theme_get_setting('twitter_url', 'responsive_blog')); 
+        $facebook_url = check_plain(theme_get_setting('facebook_url', 'responsive_blog')); 
+        $google_plus_url = check_plain(theme_get_setting('google_plus_url', 'responsive_blog')); 
         $pinterest_url = check_plain(theme_get_setting('pinterest_url', 'responsive_blog'));
         ?>
       <div class="social-profile">
         <ul>
           <?php if ($facebook_url): ?><li class="facebook">
-            <a target="_blank" title="<?php print $site_name; ?> on Facebook" href="<?php print $facebook_url; ?>"><?php print $site_name; ?> Facebook </a>
+            <a target="_blank" title="<?php print $site_name; ?> in Facebook" href="<?php print $facebook_url; ?>"><?php print $site_name; ?> Facebook </a>
           </li><?php endif; ?>
           <?php if ($twitter_url): ?><li class="twitter">
-            <a target="_blank" title="<?php print $site_name; ?> on Twitter" href="<?php print $twitter_url; ?>"><?php print $site_name; ?> Twitter </a>
+            <a target="_blank" title="<?php print $site_name; ?> in Twitter" href="<?php print $twitter_url; ?>"><?php print $site_name; ?> Twitter </a>
           </li><?php endif; ?>
           <?php if ($google_plus_url): ?><li class="google-plus">
-            <a target="_blank" title="<?php print $site_name; ?> on Google+" href="<?php print $google_plus_url; ?>"><?php print $site_name; ?> Google+ </a>
+            <a target="_blank" title="<?php print $site_name; ?> in Google+" href="<?php print $google_plus_url; ?>"><?php print $site_name; ?> Google+ </a>
           </li><?php endif; ?>
           <?php if ($pinterest_url): ?><li class="pinterest">
-            <a target="_blank" title="<?php print $site_name; ?> on Pinterest" href="<?php print $pinterest_url; ?>"><?php print $site_name; ?> Twitter </a>
+            <a target="_blank" title="<?php print $site_name; ?> in Pinterest" href="<?php print $pinterest_url; ?>"><?php print $site_name; ?> Twitter </a>
           </li><?php endif; ?>
           <li class="rss">
-            <a target="_blank" title="<?php print $site_name; ?> RSS" href="<?php print $front_page; ?>rss.xml"><?php print $site_name; ?> RSS </a>
+            <a target="_blank" title="<?php print $site_name; ?> in RSS" href="<?php print $front_page; ?>rss.xml"><?php print $site_name; ?> RSS </a>
           </li>
         </ul>
       </div>
     <?php endif; ?>
     <nav id="navigation" role="navigation">
       <div id="main-menu">
-        <?php
+        <?php 
           if (module_exists('i18n_menu')) {
             $main_menu_tree = i18n_menu_translated_tree(variable_get('menu_main_links_source', 'main-menu'));
           } else {
@@ -147,13 +144,13 @@
       <section id="content" role="main">
         <?php if ($is_front): ?>
         <?php if (theme_get_setting('slideshow_display','responsive_blog')): ?>
-        <?php
+        <?php 
         $slide1_url = check_plain(theme_get_setting('slide1_url','responsive_blog'));
         $slide2_url = check_plain(theme_get_setting('slide2_url','responsive_blog'));
         $slide3_url = check_plain(theme_get_setting('slide3_url','responsive_blog'));
-        $slide1_desc = check_markup(theme_get_setting('slide1_desc', 'responsive_blog'), 'full_html');
-        $slide2_desc = check_markup(theme_get_setting('slide2_desc', 'responsive_blog'), 'full_html');
-        $slide3_desc = check_markup(theme_get_setting('slide3_desc', 'responsive_blog'), 'full_html');
+        $slide1_desc = check_markup(theme_get_setting('slide1_desc', 'responsive_blog'), 'full_html'); 
+        $slide2_desc = check_markup(theme_get_setting('slide2_desc', 'responsive_blog'), 'full_html'); 
+        $slide3_desc = check_markup(theme_get_setting('slide3_desc', 'responsive_blog'), 'full_html'); 
         ?>
         <div id="slider">
           <div id="slider-wrap">
@@ -198,7 +195,7 @@
     <?php if ($page['sidebar_first']): ?>
       <aside id="sidebar" role="complementary">
        <?php print render($page['sidebar_first']); ?>
-      </aside>
+      </aside> 
     <?php endif; ?>
   </div>
 
@@ -217,13 +214,13 @@
           </div><?php endif; ?>
         </div>
       <?php endif; ?>
-
+      
       <?php print render($page['footer']); ?>
     </div>
 
     <div id="bottom" class="clearfix">
       <div class="copyright"><?php print t('Copyright'); ?> &copy; <?php echo date("Y"); ?>, <a href="<?php print $front_page; ?>"><?php print $site_name; ?></a></div>
-<!--      <div class="credit">--><?php //print t('Theme by'); ?><!--  <a href="http://www.devsaran.com" target="_blank">Devsaran</a></div>-->
+      <div class="credit"><?php print t('Theme by'); ?>  <a href="http://www.devsaran.com" target="_blank">Devsaran</a></div>
     </div>
   </footer>
 
