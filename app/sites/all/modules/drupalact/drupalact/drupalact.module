@@ -1,0 +1,20 @@
+<?php
+/**
+ * Implements hook_help().
+ */
+function drupalact_help($path, $arg) {
+  switch ($path) {
+    case 'node/add/session':
+    return '<p>' . t('We are inviting everyone to submit a session for
+    consideration to the DrupalGov Canberra 2014 program. DrupalGov Canberra
+    2014 will be running 3 simultaneous tracks of sessions, panels and
+    discussions. This conference brings together representatives from Australian
+     Federal and State Government and puts them together with some of the most
+     well known companies and individuals within the Drupal community.') .
+    '</p>'. t('Tracks'). '<ul><li>' . t('Drupal in Government') . '</li><li>' .
+    t('Coding, Frontend & DevOps') . '</li><li>' .
+    t('Case Studies/Panel Discussions') . '</li></ul><p>' .
+    t('The call for sessions ends Friday, 1 August at 23:59 AEST (UTC +10).') .
+    '</p>';
+   }
+}

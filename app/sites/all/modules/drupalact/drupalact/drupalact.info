@@ -1,0 +1,4 @@
+name = Drupalact tweak
+description = Custom tweaks for Drupalact.
+core = 7.x
+project = "Drupalact"
