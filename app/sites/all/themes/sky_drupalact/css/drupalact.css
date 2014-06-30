@@ -548,3 +548,17 @@ h2#site-slogan {
     font-size:83%;
   }
 }
+
+.flex-caption {
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  text-align: center;
+  background: #000000;
+  background: rgba(0,0,0,0.5);
+}
+
+.flex-caption a {
+  color: white;
+  font-size: 1.5em;
+}
